@@ -16,7 +16,17 @@ df_compras = pd.read_csv(URL_COMPRAS)
 tabela_shows = df_shows.T
 tabela_shows = tabela_shows.rename(columns={'ano': 'year', 'mes': 'month', 'dia': 'day'})
 tabela_shows['data'] = pd.to_datetime(tabela_shows, format='%Y%m%d')
-tabela_shows = tabela_shows.drop(['year', 'month', 'day'], 1)
+tabela_shows = tabela_shows.drop(['year', 'month', 'day'], axis=1)
 tabela_shows = tabela_shows.reset_index()
 tabela_shows = tabela_shows.rename(columns={'index': 'show'})
-print(tabela_shows[tabela_shows['show'] == 'Nascent Letter']['data'])
+
+print(tabela_shows)
+tabela_ingressos = df_ingressos
+tabela_ingressos = tabela_ingressos.rename(columns={'ano': 'year', 'mes': 'month', 'dia': 'day'})
+tabela_ingressos['data'] = pd.to_datetime(tabela_ingressos[['year', 'month', 'day']], format='%Y%m%d')
+tabela_ingressos = tabela_ingressos.drop(['year', 'month', 'day'], axis=1)
+tabela_ingressos = tabela_ingressos[['data', 'nome', 'status', 'tipo']]
+
+print(tabela_ingressos.head())
+
+# Média de gastos de pessoas com ingresso pista
