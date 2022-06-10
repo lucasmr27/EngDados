@@ -57,11 +57,13 @@ print(f"R${round(df_final[df_final['tipo'] == 'Pista']['gastos'].mean(), 2)}")
 #print(tabela_ingressos)
 compraram = set(tabela_ingressos[tabela_ingressos['status'] == 'Concluido']['nome'])
 compareceram = set(df_final[df_final['status'] == 'Concluido']['nome'])
-print('Pessoas que não compareceram aos shows:')
+print('\nPessoas que não compareceram aos shows:')
 for pessoa in (compraram - compareceram):
     print(pessoa)
 # TODO 3: Pessoas que compraram ingressos com os concorrentes
-
+concorrencia = set(df_final[df_final['status'] != 'Concluido']['nome'])
+print('\nLista de pessoas que compraram pelo menos um ingresso na concorrência:')
+print(list(concorrencia))
 # TODO 4: Dia com maior gasto
 
 # TODO 5: no pdf
