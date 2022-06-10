@@ -33,10 +33,10 @@ df_final = df_final.merge(tabela_ingressos[tabela_ingressos['status'] == 'Conclu
 
 #print(tabela_ingressos[tabela_ingressos.duplicated(keep = False, subset=['nome'])])
 # print(df_ingressos[(df_ingressos['tipo'] == 'Pista') & (df_ingressos['status'] == 'Concluido')])
-# teste = 'Alice Gamba'
-# print(df_ingressos[df_ingressos['nome'] == teste])
-# print(df_compras[df_compras['nome'] == teste])
-# print(df_final[df_final['nome'] == teste])
+teste = 'Elizabeth Daly'
+print(df_ingressos[df_ingressos['nome'] == teste])
+print(df_compras[df_compras['nome'] == teste])
+print(df_final[df_final['nome'] == teste])
 
 
 
@@ -71,3 +71,23 @@ dia_maior_gasto = total_compras_dia.at[indice, 'data'].round(freq='d')
 print('\nO dia com maior gasto foi:')
 print(f'{dia_maior_gasto.day}/{dia_maior_gasto.month}/{dia_maior_gasto.year}')
 # TODO 5: no pdf
+
+tabela_ingressos = tabela_ingressos.sort_values('status')
+df_desistentes = tabela_ingressos.groupby(['nome', 'show'])['status'].sum().reset_index()
+df_desistentes = df_desistentes[df_desistentes['status'].apply(lambda x: x[0]) != 'C']
+df_desistentes = df_desistentes.drop(['status'], axis=1)
+df_desistentes = df_desistentes.merge(tabela_compras, how='left')
+df_desistentes.fillna(0)
+
+#print(df_desistentes['nome'].to_list())
+desistentes = []
+for pessoa in set(df_desistentes['nome']):
+    nome = pessoa
+    gastos = df_desistentes[df_desistentes['nome'] == pessoa]['gastos'].sum()
+    shows = df_desistentes[df_desistentes['nome'] == pessoa]['show'].to_list()
+    desistentes += [{'nome': pessoa,
+                    'gastos': gastos,
+                    'shows': shows
+                    }]
+tabela = pd.DataFrame(data=desistentes)
+print(tabela)
