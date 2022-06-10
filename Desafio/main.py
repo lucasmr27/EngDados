@@ -50,7 +50,7 @@ for indice in tabela_ingressos[tabela_ingressos['status'] == 'Concluido'].index:
 
 # print(tabela_ingressos[(tabela_ingressos['status'] == 'Concluido') & (tabela_ingressos['tipo'] == 'Pista')])
 # TODO 1: Média de gastos de pessoas com ingresso pista
-print('A média de gastos por pessoas com o ingresso tipo pista foi de:')
+print('\nA média de gastos por pessoas com o ingresso tipo pista foi de:')
 print(f"R${round(df_final[df_final['tipo'] == 'Pista']['gastos'].mean(), 2)}")
 
 # TODO 2: Pessoas não compareceram aos shows
@@ -65,5 +65,9 @@ concorrencia = set(df_final[df_final['status'] != 'Concluido']['nome'])
 print('\nLista de pessoas que compraram pelo menos um ingresso na concorrência:')
 print(list(concorrencia))
 # TODO 4: Dia com maior gasto
-
+total_compras_dia = df_final.groupby('data')['gastos'].sum().reset_index()
+indice = total_compras_dia[total_compras_dia['gastos'] == total_compras_dia['gastos'].max()].index[0]
+dia_maior_gasto = total_compras_dia.at[indice, 'data'].round(freq='d')
+print('\nO dia com maior gasto foi:')
+print(f'{dia_maior_gasto.day}/{dia_maior_gasto.month}/{dia_maior_gasto.year}')
 # TODO 5: no pdf
