@@ -30,10 +30,10 @@ tabela_compras = df_compras.groupby(['nome', 'show'])['gastos'].sum().reset_inde
 
 df_final = tabela_compras.merge(tabela_shows, how='left')
 df_final = df_final.merge(tabela_ingressos[tabela_ingressos['status'] == 'Concluido'], how='left')
-print(df_final)
+
 #print(tabela_ingressos[tabela_ingressos.duplicated(keep = False, subset=['nome'])])
 # print(df_ingressos[(df_ingressos['tipo'] == 'Pista') & (df_ingressos['status'] == 'Concluido')])
-# teste = 'Miguel Ramey'
+# teste = 'Alice Gamba'
 # print(df_ingressos[df_ingressos['nome'] == teste])
 # print(df_compras[df_compras['nome'] == teste])
 # print(df_final[df_final['nome'] == teste])
@@ -51,12 +51,15 @@ for indice in tabela_ingressos[tabela_ingressos['status'] == 'Concluido'].index:
 # print(tabela_ingressos[(tabela_ingressos['status'] == 'Concluido') & (tabela_ingressos['tipo'] == 'Pista')])
 # TODO 1: Média de gastos de pessoas com ingresso pista
 print('A média de gastos por pessoas com o ingresso tipo pista foi de:')
-print(df_final[df_final['tipo'] == 'Pista']['gastos'].mean())
+print(f"R${round(df_final[df_final['tipo'] == 'Pista']['gastos'].mean(), 2)}")
 
 # TODO 2: Pessoas não compareceram aos shows
 #print(tabela_ingressos)
-#print(tabela_ingressos[(tabela_ingressos['show'] == 'Nascent Letter') & (tabela_ingressos['status'] == 'Concluido')])
-
+compraram = set(tabela_ingressos[tabela_ingressos['status'] == 'Concluido']['nome'])
+compareceram = set(df_final[df_final['status'] == 'Concluido']['nome'])
+print('Pessoas que não compareceram aos shows:')
+for pessoa in (compraram - compareceram):
+    print(pessoa)
 # TODO 3: Pessoas que compraram ingressos com os concorrentes
 
 # TODO 4: Dia com maior gasto
