@@ -43,11 +43,9 @@ with open('Desafio/questao_1.txt', 'w') as q1:
 # TODO 2: Pessoas que não compareceram aos shows
 compraram = set(tabela_ingressos[tabela_ingressos['status'] == 'Concluido']['nome'])
 compareceram = set(df_final[df_final['status'] == 'Concluido']['nome'])
-ausentes = list(compraram - compareceram)
-ausentes.sort()
 resposta_2 = ''
 print('\n2) Pessoas que não compareceram aos shows:')
-for pessoa in ausentes:
+for pessoa in sorted(list(compraram - compareceram)):
     print(pessoa)
     resposta_2 += pessoa + '\n'
 # Salvando resposta
@@ -55,8 +53,7 @@ with open('Desafio/questao_2.txt', 'w') as q2:
     q2.write(resposta_2)
 
 # TODO 3: Pessoas que compraram ingressos com os concorrentes
-concorrencia = list(set(df_final[df_final['status'] != 'Concluido']['nome']))
-concorrencia.sort()
+concorrencia = sorted(list(set(df_final[df_final['status'] != 'Concluido']['nome'])))
 resposta_3 = ''
 print('\n3) Lista de pessoas que compraram pelo menos um ingresso na concorrência:')
 for pessoa in concorrencia:
@@ -70,15 +67,15 @@ with open('Desafio/questao_3.txt', 'w') as q3:
 # TODO 4: Dia com maior gasto
 total_compras_dia = df_final.groupby('data')['gastos'].sum().reset_index()
 indice = total_compras_dia[total_compras_dia['gastos'] == total_compras_dia['gastos'].max()].index[0]
-dia_maior_gasto = total_compras_dia.at[indice, 'data'].round(freq='d')
-print('\nO dia com maior gasto foi:')
+dia_maior_gasto = total_compras_dia.at[indice, 'data']
 resposta_4 = '{:0=2d}/{:0=2d}/{}'.format(dia_maior_gasto.day, dia_maior_gasto.month, dia_maior_gasto.year)
+print('\n4) O dia com maior gasto foi:')
 print(resposta_4)
 # Salvando resposta
 with open('Desafio/questao_4.txt', 'w') as q4:
     q4.write(resposta_4)
 
-# TODO 5: no pdf
+# TODO 5: Listar os clientes que desistiram de comprar o ingresso com a AT
 # Criação do data frame dos desistentes
 tabela_ingressos = tabela_ingressos.sort_values('status')
 df_desistentes = tabela_ingressos.groupby(['nome', 'show'])['status'].sum().reset_index()
@@ -90,7 +87,7 @@ desistentes = []
 resposta_5 = ''
 
 # Formatação das informações dos desistentes
-for pessoa in set(df_desistentes['nome']):
+for pessoa in sorted(list(set(df_desistentes['nome']))):
     nome = pessoa
     gastos = df_desistentes[df_desistentes['nome'] == pessoa]['gastos'].sum()
     shows = df_desistentes[df_desistentes['nome'] == pessoa]['show'].to_list()
@@ -103,7 +100,8 @@ for pessoa in set(df_desistentes['nome']):
             f"    'gastos': {round(gastos, 2)},\n"
             f"    'shows': {shows}\n"
             "}\n")
-
+print("\n5) Lista com os clientes que desistiram de comprar o ingresso com a AT.")
+print(resposta_5)
 # Salvando em arquivos os resultados da questão 5
 tabela = pd.DataFrame(data=desistentes)
 with open('Desafio/questao_5.txt', 'w') as q5:

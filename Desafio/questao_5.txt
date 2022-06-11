@@ -1,7 +1,7 @@
 {
-    'nome': Curtis Hernandez,
+    'nome': Alice Gamba,
     'gastos': 0.0,
-    'shows': ['Symbolic Toy']
+    'shows': ['Nascent Letter']
 }
 {
     'nome': Amy Mejia,
@@ -9,63 +9,13 @@
     'shows': ['Nascent Letter']
 }
 {
-    'nome': Brenda Kozak,
-    'gastos': 0.0,
-    'shows': ['Symbolic Toy']
+    'nome': Andrea Galyen,
+    'gastos': 5133.81,
+    'shows': ['Symbolic Toy', 'Terrestrial Chair']
 }
 {
-    'nome': Alice Gamba,
-    'gastos': 0.0,
-    'shows': ['Nascent Letter']
-}
-{
-    'nome': Frank Houck,
-    'gastos': 0.0,
-    'shows': ['Nascent Letter', 'Terrestrial Chair']
-}
-{
-    'nome': Yong Baltazar,
-    'gastos': 0.0,
-    'shows': ['Symbolic Toy']
-}
-{
-    'nome': Shayla Baird,
-    'gastos': 1613.1,
-    'shows': ['Nascent Letter']
-}
-{
-    'nome': Michael Gaines,
-    'gastos': 1754.21,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Frank Davilla,
-    'gastos': 1724.35,
-    'shows': ['Nascent Letter']
-}
-{
-    'nome': Maria Marshall,
-    'gastos': 1963.9,
-    'shows': ['Nascent Letter']
-}
-{
-    'nome': Richard Jimenez,
-    'gastos': 1170.46,
-    'shows': ['Symbolic Toy']
-}
-{
-    'nome': Edna Martinez,
-    'gastos': 9415.36,
-    'shows': ['Nascent Letter', 'Terrestrial Chair']
-}
-{
-    'nome': Gerald Allen,
-    'gastos': 3447.17,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Joshua Sanderson,
-    'gastos': 1775.6,
+    'nome': Benjamin Mcdonald,
+    'gastos': 2309.81,
     'shows': ['Terrestrial Chair']
 }
 {
@@ -74,7 +24,7 @@
     'shows': ['Terrestrial Chair']
 }
 {
-    'nome': Edward Smith,
+    'nome': Brenda Kozak,
     'gastos': 0.0,
     'shows': ['Symbolic Toy']
 }
@@ -82,6 +32,76 @@
     'nome': Charles Hershenson,
     'gastos': 163.44,
     'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Curtis Hernandez,
+    'gastos': 0.0,
+    'shows': ['Symbolic Toy']
+}
+{
+    'nome': Daniel Puckett,
+    'gastos': 1489.02,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Debra Howard,
+    'gastos': 5879.15,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Donna Chandler,
+    'gastos': 0.0,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Donna Wal,
+    'gastos': 3279.79,
+    'shows': ['Symbolic Toy']
+}
+{
+    'nome': Edna Martinez,
+    'gastos': 9415.36,
+    'shows': ['Nascent Letter', 'Terrestrial Chair']
+}
+{
+    'nome': Edward Smith,
+    'gastos': 0.0,
+    'shows': ['Symbolic Toy']
+}
+{
+    'nome': Elizabeth Daly,
+    'gastos': 0.0,
+    'shows': ['Symbolic Toy', 'Terrestrial Chair']
+}
+{
+    'nome': Emil Nord,
+    'gastos': 4798.81,
+    'shows': ['Nascent Letter']
+}
+{
+    'nome': Frank Davilla,
+    'gastos': 1724.35,
+    'shows': ['Nascent Letter']
+}
+{
+    'nome': Frank Houck,
+    'gastos': 0.0,
+    'shows': ['Nascent Letter', 'Terrestrial Chair']
+}
+{
+    'nome': Frederick Bank,
+    'gastos': 11883.25,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Gerald Allen,
+    'gastos': 3447.17,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': James Coffey,
+    'gastos': 0.0,
+    'shows': ['Nascent Letter']
 }
 {
     'nome': James Reaves,
@@ -94,8 +114,8 @@
     'shows': ['Terrestrial Chair']
 }
 {
-    'nome': William Barnes,
-    'gastos': 3218.63,
+    'nome': Jeffrey Pace,
+    'gastos': 5810.78,
     'shows': ['Terrestrial Chair']
 }
 {
@@ -104,14 +124,14 @@
     'shows': ['Symbolic Toy']
 }
 {
+    'nome': Joshua Sanderson,
+    'gastos': 1775.6,
+    'shows': ['Terrestrial Chair']
+}
+{
     'nome': Kelly Williamson,
     'gastos': 9380.15,
     'shows': ['Nascent Letter', 'Symbolic Toy']
-}
-{
-    'nome': Emil Nord,
-    'gastos': 4798.81,
-    'shows': ['Nascent Letter']
 }
 {
     'nome': Larry Teague,
@@ -119,43 +139,18 @@
     'shows': ['Symbolic Toy']
 }
 {
-    'nome': Mitchell Kostyla,
-    'gastos': 10633.15,
-    'shows': ['Nascent Letter', 'Terrestrial Chair']
-}
-{
-    'nome': Jeffrey Pace,
-    'gastos': 5810.78,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Andrea Galyen,
-    'gastos': 5133.81,
-    'shows': ['Symbolic Toy', 'Terrestrial Chair']
-}
-{
-    'nome': Richard Culpepper,
-    'gastos': 0.0,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Frederick Bank,
-    'gastos': 11883.25,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Benjamin Mcdonald,
-    'gastos': 2309.81,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Sabrina Graves,
-    'gastos': 1893.27,
+    'nome': Margaret Robinson,
+    'gastos': 3148.62,
     'shows': ['Nascent Letter']
 }
 {
-    'nome': Debra Howard,
-    'gastos': 5879.15,
+    'nome': Maria Marshall,
+    'gastos': 1963.9,
+    'shows': ['Nascent Letter']
+}
+{
+    'nome': Maria Villa,
+    'gastos': 0.0,
     'shows': ['Terrestrial Chair']
 }
 {
@@ -164,14 +159,14 @@
     'shows': ['Nascent Letter']
 }
 {
-    'nome': Travis Whatley,
-    'gastos': 0.0,
+    'nome': Michael Gaines,
+    'gastos': 1754.21,
     'shows': ['Terrestrial Chair']
 }
 {
-    'nome': Suzanne Herring,
-    'gastos': 3387.75,
-    'shows': ['Terrestrial Chair']
+    'nome': Mitchell Kostyla,
+    'gastos': 10633.15,
+    'shows': ['Nascent Letter', 'Terrestrial Chair']
 }
 {
     'nome': Nancy Degroot,
@@ -179,19 +174,34 @@
     'shows': ['Symbolic Toy']
 }
 {
-    'nome': Daniel Puckett,
-    'gastos': 1489.02,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': Maria Villa,
+    'nome': Nancy Smith,
     'gastos': 0.0,
     'shows': ['Terrestrial Chair']
 }
 {
-    'nome': Margaret Robinson,
-    'gastos': 3148.62,
+    'nome': Richard Culpepper,
+    'gastos': 0.0,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Richard Jimenez,
+    'gastos': 1170.46,
+    'shows': ['Symbolic Toy']
+}
+{
+    'nome': Sabrina Graves,
+    'gastos': 1893.27,
     'shows': ['Nascent Letter']
+}
+{
+    'nome': Shayla Baird,
+    'gastos': 1613.1,
+    'shows': ['Nascent Letter']
+}
+{
+    'nome': Suzanne Herring,
+    'gastos': 3387.75,
+    'shows': ['Terrestrial Chair']
 }
 {
     'nome': Tina Yee,
@@ -199,27 +209,17 @@
     'shows': ['Nascent Letter', 'Symbolic Toy']
 }
 {
-    'nome': Nancy Smith,
+    'nome': Travis Whatley,
     'gastos': 0.0,
     'shows': ['Terrestrial Chair']
 }
 {
-    'nome': Donna Wal,
-    'gastos': 3279.79,
+    'nome': William Barnes,
+    'gastos': 3218.63,
+    'shows': ['Terrestrial Chair']
+}
+{
+    'nome': Yong Baltazar,
+    'gastos': 0.0,
     'shows': ['Symbolic Toy']
-}
-{
-    'nome': Donna Chandler,
-    'gastos': 0.0,
-    'shows': ['Terrestrial Chair']
-}
-{
-    'nome': James Coffey,
-    'gastos': 0.0,
-    'shows': ['Nascent Letter']
-}
-{
-    'nome': Elizabeth Daly,
-    'gastos': 0.0,
-    'shows': ['Symbolic Toy', 'Terrestrial Chair']
 }
