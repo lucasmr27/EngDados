@@ -17,6 +17,7 @@ def formatar_data(df):
     df = df.drop(['year', 'month', 'day'], axis=1)
     return df
 
+
 # Transformações das tabelas
 tabela_shows = formatar_data(df_shows.transpose())
 tabela_shows = tabela_shows.reset_index()
@@ -39,7 +40,7 @@ print(resposta_1)
 with open('Desafio/questao_1.txt', 'w') as q1:
     q1.write(resposta_1)
 
-# TODO 2: Pessoas não compareceram aos shows
+# TODO 2: Pessoas que não compareceram aos shows
 compraram = set(tabela_ingressos[tabela_ingressos['status'] == 'Concluido']['nome'])
 compareceram = set(df_final[df_final['status'] == 'Concluido']['nome'])
 ausentes = list(compraram - compareceram)
@@ -71,9 +72,8 @@ total_compras_dia = df_final.groupby('data')['gastos'].sum().reset_index()
 indice = total_compras_dia[total_compras_dia['gastos'] == total_compras_dia['gastos'].max()].index[0]
 dia_maior_gasto = total_compras_dia.at[indice, 'data'].round(freq='d')
 print('\nO dia com maior gasto foi:')
-resposta_4 = f'{dia_maior_gasto.day}/{dia_maior_gasto.month}/{dia_maior_gasto.year}'
-reposta_44 = '{:%d/%m/%Y}'.format, dia_maior_gasto
-print(resposta_44)
+resposta_4 = '{:0=2d}/{:0=2d}/{}'.format(dia_maior_gasto.day, dia_maior_gasto.month, dia_maior_gasto.year)
+print(resposta_4)
 # Salvando resposta
 with open('Desafio/questao_4.txt', 'w') as q4:
     q4.write(resposta_4)
