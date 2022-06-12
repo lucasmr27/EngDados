@@ -84,26 +84,28 @@ df_desistentes = df_desistentes.drop(['status'], axis=1)
 df_desistentes = df_desistentes.merge(tabela_compras, how='left')
 df_desistentes.fillna(0)
 desistentes = []
-resposta_5 = ''
+resposta_5 = '['
 
 # Formatação das informações dos desistentes
 for pessoa in sorted(list(set(df_desistentes['nome']))):
     nome = pessoa
     gastos = df_desistentes[df_desistentes['nome'] == pessoa]['gastos'].sum()
-    shows = df_desistentes[df_desistentes['nome'] == pessoa]['show'].to_list()
+    shows = df_desistentes[df_desistentes["nome"] == pessoa]["show"].to_list()
     desistentes += [{'nome': pessoa,
                     'gastos': round(gastos, 2),
                     'shows': shows
                     }]
-    resposta_5 += ("{\n"
-            f"    'nome': {pessoa},\n"
-            f"    'gastos': {round(gastos, 2)},\n"
-            f"    'shows': {shows}\n"
-            "}\n")
+    resposta_5 += ('{\n'
+            f'    "nome": "{pessoa}",\n'
+            f'    "gastos": {round(gastos, 2)},\n'
+            f'    "shows": {shows}\n'
+            '},\n')
 print("\n5) Lista com os clientes que desistiram de comprar o ingresso com a AT.")
+resposta_5 = resposta_5[:-2] + "]"
+resposta_5 = resposta_5.translate(str.maketrans("'",'"'))
 print(resposta_5)
-# Salvando em arquivos os resultados da questão 5
-tabela = pd.DataFrame(data=desistentes)
-with open('Desafio/questao_5.txt', 'w') as q5:
+# Salvando em arquivo os resultados da questão 5
+with open('Desafio/questao_5.json', 'w') as q5:
     q5.write(resposta_5)
-tabela.to_json('Desafio/questao_5.json', orient="records")
+# tabela = pd.DataFrame(data=desistentes)
+# tabela.to_json('Desafio/questao_5.json', orient="records")
